@@ -20,7 +20,7 @@ class RegisterApplicationTests {
 
 	@Test
 	void should_register_user_successfully() {
-		User userBeforeSave = new User("John", "1234", LocalDate.of(1993, 5, 14));
+		User userBeforeSave = new User( null, "John", "1234", LocalDate.of(1993, 5, 14));
 		User userAfterSave = userBeforeSave;
 		userAfterSave.setId("1");
 		Mockito.when(userRepository.save(userBeforeSave)).thenReturn(userAfterSave);
